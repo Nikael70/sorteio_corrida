@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    
+
+    <p id="paragrafoResultado">
+
+     Clique no botao para participar do sorteio de uma corrida gratis
+    </p>
+    <button id="botaoSorteio" onclick="executarsorteio()">
+      Corida de graca
+    </button>
+  </head> 
+   <body>
+
+     <script >
+       function executarsorteio()
+{
+           aleatorio=Math.round(Math.random()*10)
+           chute=prompt("Qual e seu numero da sorte? de (1 A 10)")
+           numerocerto=chute==aleatorio
+           console.log(aleatorio)
+
+         while(chute>10 || chute<0){
+             chute=prompt("Numero invalido, digitr novamente (1 A 10)")
+          }
+          numerocerto=chute==aleatorio
+
+         if(numerocerto){
+           paragrafoResultado.innerHTML= 'Voce ganhou o sorteio'}
+         if(!numerocerto){
+            paragrafoResultado.innerHTML= 'Tente novamente'}
+          }
+     </script>
+//  </body>
+</html>
